@@ -3,8 +3,8 @@ Library  RequestsLibrary
 Library  OperatingSystem
 
 ***Variables***
-${url}  http://10.0.131.21/
-${uri}  GCRevenueAppointment/apiappointment/api/token/create
+${url}  http://10.0.0.0/
+${uri}  abc/asddfkkf/create
 
 
 ***Test Cases***
