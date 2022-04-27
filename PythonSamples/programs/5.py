@@ -1,4 +1,4 @@
-num=int(input('enter a number'))
+# num=int(input('enter a number'))
 number=198
 
 rev=0
