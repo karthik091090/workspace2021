@@ -1,0 +1,55 @@
+pool:
+  name: QA-Automation
+  demands: Agent.Name -equals KPDCSVTF005-DEV
+
+# app-ci YAML pipeline
+# We are setting up a pipeline resource that references the security-lib-ci
+# pipeline and setting up a pipeline completion trigger so that our app-ci
+# pipeline runs when a run of the security-lib-ci pipeline completes
+resources:
+  pipelines:
+  - pipeline: ebilling # Name of the pipeline resource.
+    source: \ebilling # The name of the pipeline referenced by this pipeline resource.
+    project: eBilling # Required only if the source pipeline is in another project
+    trigger: true # Run app-ci pipeline when any run of security-lib-ci completes
+
+steps:
+- script: 'newman run --disable-unicode aqaba_collection.json -e aqaba_environment.json -r cli,htmlextra --reporter-htmlextra-export ./results$(Build.BuildNumber)/report.html'
+  workingDirectory: '$(System.DefaultWorkingDirectory)/PostmanCollections/AQABA'
+  displayName: 'Run API Test Newman'
+  continueOnError: true
+
+- task: CopyFiles@2
+  displayName: 'Copy Files to: Artifacts'
+  inputs:
+    SourceFolder: '$(System.DefaultWorkingDirectory)/PostmanCollections/AQABA/results$(Build.BuildNumber)'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)/AQABA/results$(Build.BuildNumber)'
+  condition: always()
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact: Results'
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)/AQABA/results$(Build.BuildNumber)'
+    ArtifactName: Results
+  condition: always()
+
+- task: DeleteFiles@1
+  displayName: 'Delete files from DefaultWorkingDirectory'
+  inputs:
+    SourceFolder: '$(System.DefaultWorkingDirectory)'
+    Contents: |
+     SmartbearTC
+     **/.git/objects/pack/*
+     ExternalFiles
+     JMeterFiles
+     Library
+     OTHERZ
+     PostmanCollections
+     PageObjects
+     Res
+     RunTest
+     TestSteps
+     TestSuite
+     VariableFiles
+     pcs.xlsx
+  condition: always()

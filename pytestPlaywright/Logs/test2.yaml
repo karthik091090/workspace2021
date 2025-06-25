@@ -1,0 +1,56 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger: none
+
+pool:
+  name: QA-Automation
+  demands: Agent.Name -equals InteractiveAgent
+
+# app-ci YAML pipeline
+# We are setting up a pipeline resource that references the security-lib-ci
+# pipeline and setting up a pipeline completion trigger so that our app-ci
+# pipeline runs when a run of the security-lib-ci pipeline completes
+resources:
+  pipelines:
+  - pipeline: atlp-dashboard-ui # Name of the pipeline resource.
+    source: \atlp-dashboard-ui # The name of the pipeline referenced by this pipeline resource.
+    project: ATLP UI # Required only if the source pipeline is in another project
+    trigger: true # Run app-ci pipeline when any run of security-lib-ci completes
+
+steps:
+- task: VisualStudioTestPlatformInstaller@1
+  displayName: 'Visual Studio Test Platform Installer'
+  condition: succeededOrFailed()
+  
+- task: InstallTestCompleteAdapter@1
+  displayName: 'TestComplete test adapter installer'
+  inputs:
+    installExecutor: false
+    updateExecutor: false
+    accessKey: '9ba7ef41-c34d-45e8-ab9b-f68dcc34b91c'
+    logsLevel: 0
+    cmdLineParams: '/PrjVar:executionType=headless /PrjVar:env=qa'
+  condition: succeededOrFailed()
+
+- task: VSTest@2
+  displayName: 'VsTest - testAssemblies'
+  inputs:
+    testAssemblyVer2: '**\*PS_ATLP_SharedServices.pjs'
+    resultsFolder: '$(Agent.TempDirectory)/TestResults'
+    testFiltercriteria: 'Group=gp_signup | Group=gp_forgot | Group=gp_login | Group=gp_settings | Group=gp_userprofile'
+    vsTestVersion: toolsInstaller
+    codeCoverageEnabled: true
+  condition: succeededOrFailed()
+
+- task: DeleteFiles@1
+  displayName: 'Delete files from DefaultWorkingDirectory'
+  inputs:
+    SourceFolder: '$(System.DefaultWorkingDirectory)'
+    Contents: |
+     SmartbearTC
+     **/.git/objects/pack/*
+     TestCompleteAdapter
+  condition: always()
