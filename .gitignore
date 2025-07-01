@@ -2,4 +2,5 @@ RFsamples/Report
 
 # Ignore Pyc files
 *.pyc
-
+pytestPlaywright/allureReports
+pytestPlaywright/screenshot
