@@ -3,10 +3,14 @@ from playwright.sync_api import sync_playwright
 from utilities import configReader
 import allure
 
-@pytest.fixture(scope="function")
-def browser():
+@pytest.fixture(params=["chrome"],scope="function")
+def browser(request):
+    browser_type=request.param
     with sync_playwright() as p:
-        browser=p.chromium.launch(headless=False)
+        if browser_type== 'chrome':
+            browser=p.chromium.launch(headless=False)
+        else:
+            raise ValueError(f"unsupported brwser: {browser_type}")
         yield browser
         browser.close()
 

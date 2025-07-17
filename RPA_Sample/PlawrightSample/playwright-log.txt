@@ -1,0 +1,95 @@
+{"level":30,"time":"2025-07-10T10:35:23.880Z","pid":39592,"hostname":"AEADLT15396","msg":"Listening on 127.0.0.1:55433"}
+(node:39592) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{"level":30,"time":"2025-07-10T10:35:24.148Z","pid":39592,"hostname":"AEADLT15396","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-07-10T10:35:24.654Z","pid":39592,"hostname":"AEADLT15396","msg":"Adding browser to stack: chromium, version: 138.0.7204.15"}
+{"level":30,"time":"2025-07-10T10:35:24.655Z","pid":39592,"hostname":"AEADLT15396","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-07-10T10:35:24.655Z","pid":39592,"hostname":"AEADLT15396","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-07-10T10:35:24.667Z","pid":39592,"hostname":"AEADLT15396","msg":"Start of node method newContext"}
+{"level":30,"time":"2025-07-10T10:35:24.667Z","pid":39592,"hostname":"AEADLT15396","msg":"Creating new context with options: {\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"height\":720,\"width\":1280}}"}
+{"level":30,"time":"2025-07-10T10:35:24.667Z","pid":39592,"hostname":"AEADLT15396","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-07-10T10:35:24.667Z","pid":39592,"hostname":"AEADLT15396","msg":"Trace file: "}
+{"level":30,"time":"2025-07-10T10:35:24.697Z","pid":39592,"hostname":"AEADLT15396","msg":"Changed active context"}
+{"level":30,"time":"2025-07-10T10:35:24.697Z","pid":39592,"hostname":"AEADLT15396","msg":"End of node method newContext"}
+{"level":30,"time":"2025-07-10T10:35:24.707Z","pid":39592,"hostname":"AEADLT15396","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-07-10T10:35:24.708Z","pid":39592,"hostname":"AEADLT15396","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-07-10T10:35:25.191Z","pid":39592,"hostname":"AEADLT15396","msg":"Video path: undefined"}
+{"level":30,"time":"2025-07-10T10:35:25.192Z","pid":39592,"hostname":"AEADLT15396","msg":"Changed active page"}
+{"level":30,"time":"2025-07-10T10:35:26.914Z","pid":39592,"hostname":"AEADLT15396","msg":"End of node method newPage"}
+{"level":30,"time":"2025-07-10T10:35:26.924Z","pid":39592,"hostname":"AEADLT15396","msg":"Start of node method selectOption"}
+{"level":30,"time":"2025-07-10T10:35:26.925Z","pid":39592,"hostname":"AEADLT15396","msg":"Strict mode is enabled, find Locator with //select[@name=\"fromPort\"] in page."}
+{"level":30,"time":"2025-07-10T10:35:27.027Z","pid":39592,"hostname":"AEADLT15396","msg":"Option entries: 7"}
+{"level":30,"time":"2025-07-10T10:35:27.028Z","pid":39592,"hostname":"AEADLT15396","msg":"End of node method selectOption"}
+{"level":30,"time":"2025-07-10T10:35:27.028Z","pid":39592,"hostname":"AEADLT15396","msg":"Selected entries: 1"}
+{"level":30,"time":"2025-07-10T10:35:27.033Z","pid":39592,"hostname":"AEADLT15396","msg":"Start of node method selectOption"}
+{"level":30,"time":"2025-07-10T10:35:27.034Z","pid":39592,"hostname":"AEADLT15396","msg":"Strict mode is enabled, find Locator with //select[@name=\"toPort\"] in page."}
+{"level":30,"time":"2025-07-10T10:35:27.054Z","pid":39592,"hostname":"AEADLT15396","msg":"Option entries: 7"}
+{"level":30,"time":"2025-07-10T10:35:27.054Z","pid":39592,"hostname":"AEADLT15396","msg":"End of node method selectOption"}
+{"level":30,"time":"2025-07-10T10:35:27.054Z","pid":39592,"hostname":"AEADLT15396","msg":"Selected entries: 1"}
+{"level":30,"time":"2025-07-10T10:35:27.059Z","pid":39592,"hostname":"AEADLT15396","msg":"Start of node method click"}
+{"level":30,"time":"2025-07-10T10:35:27.059Z","pid":39592,"hostname":"AEADLT15396","msg":"Strict mode is enabled, find Locator with //input[@value=\"Find Flights\"] in page."}
+{"level":30,"time":"2025-07-10T10:35:27.798Z","pid":39592,"hostname":"AEADLT15396","msg":"End of node method click"}
+{"level":30,"time":"2025-07-10T10:35:27.804Z","pid":39592,"hostname":"AEADLT15396","msg":"Start of node method getElements"}
+{"level":30,"time":"2025-07-10T10:35:27.804Z","pid":39592,"hostname":"AEADLT15396","msg":"Strict mode is disabled, return Locator: //td[contains(text(), \"$\")] in page."}
+{"level":30,"time":"2025-07-10T10:35:27.804Z","pid":39592,"hostname":"AEADLT15396","msg":"Wait element to reach attached state."}
+{"level":30,"time":"2025-07-10T10:35:27.853Z","pid":39592,"hostname":"AEADLT15396","msg":"Found 5 elements."}
+{"level":30,"time":"2025-07-10T10:35:27.853Z","pid":39592,"hostname":"AEADLT15396","msg":"End of node method getElements"}
+{"level":30,"time":"2025-07-10T10:35:27.861Z","pid":39592,"hostname":"AEADLT15396","msg":"Start of node method getText"}
+{"level":30,"time":"2025-07-10T10:35:27.862Z","pid":39592,"hostname":"AEADLT15396","msg":"Strict mode is enabled, find Locator with //td[contains(text(), \"$\")] >> nth=0 in page."}
+{"level":30,"time":"2025-07-10T10:35:27.892Z","pid":39592,"hostname":"AEADLT15396","msg":"Retrieved text for element //td[contains(text(), \"$\")] >> nth=0 containing $472.56"}
+{"level":30,"time":"2025-07-10T10:35:27.893Z","pid":39592,"hostname":"AEADLT15396","msg":"End of node method getText"}
+{"level":30,"time":"2025-07-10T10:35:27.903Z","pid":39592,"hostname":"AEADLT15396","msg":"Start of node method getText"}
+{"level":30,"time":"2025-07-10T10:35:27.903Z","pid":39592,"hostname":"AEADLT15396","msg":"Strict mode is enabled, find Locator with //td[contains(text(), \"$\")] >> nth=1 in page."}
+{"level":30,"time":"2025-07-10T10:35:27.919Z","pid":39592,"hostname":"AEADLT15396","msg":"Retrieved text for element //td[contains(text(), \"$\")] >> nth=1 containing $432.98"}
+{"level":30,"time":"2025-07-10T10:35:27.919Z","pid":39592,"hostname":"AEADLT15396","msg":"End of node method getText"}
+{"level":30,"time":"2025-07-10T10:35:27.930Z","pid":39592,"hostname":"AEADLT15396","msg":"Start of node method getText"}
+{"level":30,"time":"2025-07-10T10:35:27.930Z","pid":39592,"hostname":"AEADLT15396","msg":"Strict mode is enabled, find Locator with //td[contains(text(), \"$\")] >> nth=2 in page."}
+{"level":30,"time":"2025-07-10T10:35:27.944Z","pid":39592,"hostname":"AEADLT15396","msg":"Retrieved text for element //td[contains(text(), \"$\")] >> nth=2 containing $200.98"}
+{"level":30,"time":"2025-07-10T10:35:27.944Z","pid":39592,"hostname":"AEADLT15396","msg":"End of node method getText"}
+{"level":30,"time":"2025-07-10T10:35:27.954Z","pid":39592,"hostname":"AEADLT15396","msg":"Start of node method click"}
+{"level":30,"time":"2025-07-10T10:35:27.954Z","pid":39592,"hostname":"AEADLT15396","msg":"Strict mode is enabled, find Locator with //td[contains(text(), \"$200.98\")]//parent::tr//input[@value='Choose This Flight'] in page."}
+{"level":30,"time":"2025-07-10T10:35:28.477Z","pid":39592,"hostname":"AEADLT15396","msg":"End of node method click"}
+{"level":30,"time":"2025-07-10T10:35:28.483Z","pid":39592,"hostname":"AEADLT15396","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-07-10T10:35:28.484Z","pid":39592,"hostname":"AEADLT15396","msg":"Strict mode is enabled, find Locator with [placeholder=\"First Last\"] in page."}
+{"level":30,"time":"2025-07-10T10:35:28.587Z","pid":39592,"hostname":"AEADLT15396","msg":"End of node method typeText"}
+{"level":30,"time":"2025-07-10T10:35:28.591Z","pid":39592,"hostname":"AEADLT15396","msg":"Start of node method click"}
+{"level":30,"time":"2025-07-10T10:35:28.592Z","pid":39592,"hostname":"AEADLT15396","msg":"Strict mode is enabled, find Locator with text=Purchase Flight in page."}
+{"level":30,"time":"2025-07-10T10:35:29.195Z","pid":39592,"hostname":"AEADLT15396","msg":"End of node method click"}
+{"level":30,"time":"2025-07-10T10:35:29.199Z","pid":39592,"hostname":"AEADLT15396","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2025-07-10T10:35:29.200Z","pid":39592,"hostname":"AEADLT15396","msg":"Strict mode is enabled, find Locator with //h1[contains(text(), 'Thank you for your purchase today!')] in page."}
+{"level":30,"time":"2025-07-10T10:35:29.218Z","pid":39592,"hostname":"AEADLT15396","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2025-07-10T10:35:29.225Z","pid":39592,"hostname":"AEADLT15396","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2025-07-10T10:35:29.233Z","pid":39592,"hostname":"AEADLT15396","msg":"Removed page=2cb2c6e9-07e3-44a3-97ff-baf4a36f05e8 from context=7540a7c8-497e-4dcc-934c-04ef52afef90 page stack"}
+{"level":30,"time":"2025-07-10T10:35:29.717Z","pid":39592,"hostname":"AEADLT15396","msg":"End of node method closeBrowser"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\python310\lib\site-packages\Browser\wrapper\index.js:12226:15)
+    at PlaywrightServer.getActiveBrowser (C:\python310\lib\site-packages\Browser\wrapper\index.js:13122:59)
+    at PlaywrightServer.setTimeout (C:\python310\lib\site-packages\Browser\wrapper\index.js:13370:57)
+    at Object.onReceiveHalfClose (C:\python310\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1461:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\python310\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:575:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\python310\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:615:14)
+    at ServerHttp2Stream.<anonymous> (C:\python310\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:382:18)
+    at ServerHttp2Stream.emit (node:events:519:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+=============================================================
+{"level":30,"time":"2025-07-10T10:35:29.732Z","pid":39592,"hostname":"AEADLT15396","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-07-10T10:35:29.733Z","pid":39592,"hostname":"AEADLT15396","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\python310\lib\site-packages\Browser\wrapper\index.js:12226:15)
+    at PlaywrightServer.getActiveBrowser (C:\python310\lib\site-packages\Browser\wrapper\index.js:13122:59)
+    at PlaywrightServer.setTimeout (C:\python310\lib\site-packages\Browser\wrapper\index.js:13370:57)
+    at Object.onReceiveHalfClose (C:\python310\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1461:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\python310\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:575:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\python310\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:615:14)
+    at ServerHttp2Stream.<anonymous> (C:\python310\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:382:18)
+    at ServerHttp2Stream.emit (node:events:519:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+=============================================================
+{"level":30,"time":"2025-07-10T10:35:29.744Z","pid":39592,"hostname":"AEADLT15396","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-07-10T10:35:29.744Z","pid":39592,"hostname":"AEADLT15396","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-07-10T10:35:30.350Z","pid":39592,"hostname":"AEADLT15396","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2025-07-10T10:35:30.350Z","pid":39592,"hostname":"AEADLT15396","msg":"End of node method closeAllBrowsers"}
