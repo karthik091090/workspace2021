@@ -1,0 +1,63 @@
+Playwright Pytest:
+	
+	Playwright sync
+		pytest -s -v --browser chromium --headed
+
+	Playwright Async
+	Conftest.py 
+
+Find elements and locator
+
+# Generic click
+page.get_by_role("button").click()
+
+# Double click
+page.get_by_text("Item").dblclick()
+
+# Right click
+page.get_by_text("Item").click(button="right")
+
+# Shift + click
+page.get_by_text("Item").click(modifiers=["Shift"])
+
+# Hover over element
+page.get_by_text("Item").hover()
+
+# Click the top left corner
+page.get_by_text("Item").click(position={ "x": 0, "y": 0})
+
+Links
+
+	def test_findlinks(page):
+    		### run command:  pytest -s -v -k findlinks
+    		page.goto("https://demo.automationtesting.in/Register.html")
+    
+    		links=page.locator('a').all()  ### to find all links in a page
+    		print(f"Total links : {len(links)}")
+    
+    		for link in links:
+        		text=link.inner_text()
+        		url=link.get_attribute('href')
+       			print(f"{text}  -->  {url}")
+
+Assertions
+
+	from playwright.sync_api import Page, expect  #import expect for assertions
+
+	# Assertion for title
+    	expect(page).to_have_title("Register")
+    
+    	# Assertion for URL
+    	expect(page).to_have_url("https://demo.automationtesting.in/Register.html")
+    
+    	# Assertion for element visibility
+    	firstname_locator= page.locator('//input[@placeholder="First Name"]')
+    	expect(firstname_locator).to_be_visible()
+
+
+
+
+I am attending training program from 27 oct to 30 oct
+
+Kindly rearrange the sentence "Dears, I am on training. For urgent queries contact Ayaz. Drop your queries, will respond once available"
+"Dear all, I am currently attending a training session. For any urgent matters, please contact Ayaz. Feel free to drop your queries, and I will respond as soon as I am available."

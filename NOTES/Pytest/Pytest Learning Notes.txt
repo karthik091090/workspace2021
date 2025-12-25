@@ -1,0 +1,35 @@
+Pytest Learning Notes
+
+Python file name should always start with "test"
+
+Execution command:
+	pytest (run all files starting with name test)
+	pytest -s -v  ###(-s To print in command line, -v to print test result in command line)
+	pytest test_abc.py -s -v ###(run test under a specific file)
+	pytest test_abc.py -s -v 
+	pytest test_markers.py -s -v -k first_sample     ###(-k : selecting specific test. first_sample is test name)
+	pytest test_markers.py -s -v -m functionional    ###(-m  : run a group of test cases with marker as functional )
+	pytest test_validate_titles.py -s -v -k validate5 --soft-asserts   ###(--soft-asserts  : run test even on failure)
+
+
+Pytest- Fixture
+@pytest.fixture(scope='module')
+@pytest.fixture(scope='function')
+
+@pytest.mark.usefixtures("modulesetup","functionsetup") 
+
+
+Pytest- Markers
+
+Group the testcases 
+	@pytest.mark.functional
+	@pytest.mark.regression	
+	Need to register marker in pytest.ini file
+
+Skip a test
+	@pytest.mark.skip    ### skip a test
+
+
+Install pytest-soft-assertions
+	This is to continue running test even after failuer
+

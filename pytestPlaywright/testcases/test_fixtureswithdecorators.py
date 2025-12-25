@@ -7,7 +7,7 @@ def modulesetup():
     print("module teardown")
     
 @pytest.fixture(scope='function')
-def functionsetup():
+def functionsetup():    
     print("function setup")
     yield
     print("function teardown")
